@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portrait Portfolio - Intricate Exposures</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--rust:#B5462A;--rust-dark:#9a3a22;--blush:#F1B9A6;--ink:#2A3232;--paper:#F7F4F1;--mist:#D4CFD3;--line:#E4DED9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px}
+a{color:inherit}
+img{max-width:100%;display:block}
+/* header */
+.site-header{position:relative;z-index:10;padding:26px 4vw;background:var(--paper)}
+.site-header.over{position:absolute;top:0;left:0;right:0;background:none}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2vw}
+.nav ul{list-style:none;display:flex;justify-content:space-around;gap:1.5vw}
+.nav a{text-decoration:none;font-size:clamp(14px,1.1vw,17px);font-weight:300;transition:opacity .2s}
+.nav a:hover{opacity:.65}
+.nav a.on{color:var(--rust);font-weight:400}
+.over .nav a{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.2)}
+.over .nav a.on{color:#fff;text-decoration:underline;text-underline-offset:6px}
+.nav .logo img{height:clamp(80px,9vw,130px);width:auto}
+.menu-btn{display:none;background:none;border:0;font:inherit;font-size:15px;cursor:pointer;color:inherit}
+.over .menu-btn{color:#fff}
+.mobile-menu{display:none}
+/* type */
+.label{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);font-weight:500;display:block;margin-bottom:1em}
+h1,h2,h3,h4{font-family:"Playfair Display",serif;font-weight:400;line-height:1.12}
+.t h1,.t h2{font-size:clamp(34px,4vw,56px);margin-bottom:.5em}
+.t h3,.t h4{font-size:clamp(26px,2.6vw,36px);margin-bottom:.5em}
+.t h5,.t h6{font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);font-weight:500;margin:0 0 1.1em}
+.t p{margin-bottom:.9em}
+.t p:last-child{margin-bottom:0}
+.t u{text-decoration-color:var(--rust);text-underline-offset:3px}
+.lead{font-size:clamp(16px,1.25vw,19px)}
+/* layout */
+section{padding:100px 6vw}
+.wrap{max-width:1120px;margin:0 auto}
+.narrow{max-width:720px;margin:0 auto}
+.center{text-align:center}
+.white{background:#fff}.mist{background:var(--mist)}.dark{background:var(--ink);color:#fff}
+.dark .label,.dark .t h5,.dark .t h6{color:var(--blush)}
+.page-head{padding:60px 6vw 70px;text-align:center}
+.page-head h1{font-size:clamp(44px,6vw,84px)}
+.page-head h1 em{color:var(--rust)}
+/* buttons */
+.btn{display:inline-block;text-decoration:none;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;padding:16px 34px;border:1px solid var(--rust);background:var(--rust);color:#fff;transition:all .2s}
+.btn:hover{background:var(--rust-dark);border-color:var(--rust-dark)}
+.btn.ghost{background:none;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.btn.line{background:none;color:var(--ink);border-color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.center .btn-row{justify-content:center}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:#fff;padding:0 6vw 12vh;overflow:hidden;background:#2a3232}
+.hero .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
+.hero .slide.on{opacity:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 50%,rgba(0,0,0,.55) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:860px}
+.hero .t h6,.hero .t h5{color:#fff;margin:0}
+.hero .t h1{font-size:clamp(48px,7vw,96px);margin:.25em 0 .3em}
+.hero .t p{display:none}
+.hero .btn-row{justify-content:center}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.tile{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;text-decoration:none;color:#fff}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.tile:hover img{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,22,22,.75),rgba(20,22,22,0) 55%)}
+.tile .cap{position:absolute;left:28px;right:28px;bottom:26px;z-index:2}
+.tile .cap .t h2{font-size:36px;margin:0 0 .2em}
+.tile .cap .t h6{color:var(--blush);margin:0}
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.split.rev>:first-child{order:2}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pair img,.split img{width:100%;height:100%;object-fit:cover}
+.single img{width:100%;max-height:85vh;object-fit:cover}
+/* masonry gallery */
+.masonry{columns:3 300px;column-gap:14px}
+.masonry img{width:100%;margin-bottom:14px;break-inside:avoid;background:var(--line)}
+/* pricing */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:stretch}
+.tier{background:var(--paper);border:1px solid var(--line);padding:42px 34px;display:flex;flex-direction:column}
+.tier.feat{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tier .t h1{font-size:40px;margin-bottom:.15em}
+.tier .price{font-family:"Playfair Display",serif;font-size:42px;color:var(--rust);margin:.2em 0 .6em}
+.tier.feat .price{color:var(--blush)}
+.tier .t p{margin-bottom:.35em;font-size:15px}
+.tier .tier-img{margin:-42px -34px 30px;aspect-ratio:4/3;overflow:hidden}
+.tier .tier-img img{width:100%;height:100%;object-fit:cover}
+.sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.session{background:#fff;display:flex;flex-direction:column}
+.session .s-img{aspect-ratio:4/5;overflow:hidden}
+.session .s-img img{width:100%;height:100%;object-fit:cover}
+.session .s-body{padding:30px 30px 34px;display:flex;flex-direction:column;flex:1}
+.session .t h2{font-size:30px;margin-bottom:.4em}
+.session .t p{margin-bottom:.3em;font-size:15px}
+.session .s-price{margin-top:auto;padding-top:18px;font-family:"Playfair Display",serif;font-size:30px;color:var(--rust)}
+.session .s-price h5{font-family:inherit;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit;font-weight:400;margin:0}
+/* testimonials */
+.quotes{position:relative;min-height:340px}
+.quote{position:absolute;inset:0;opacity:0;transition:opacity .9s;display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center;pointer-events:none}
+.quote.on{opacity:1;pointer-events:auto}
+.quote img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.quote .t p{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(19px,1.6vw,23px);line-height:1.55}
+.quote .t h4{font-family:Poppins,sans-serif;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);font-weight:500;margin-top:1.2em}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:34px}
+.dots button{width:10px;height:10px;border-radius:50%;border:1px solid var(--rust);background:none;cursor:pointer;padding:0}
+.dots button.on{background:var(--rust)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 72px;margin-top:60px}
+.step .t h5{margin-bottom:.6em}
+.step .t h2{font-size:30px;margin-bottom:.45em}
+/* faq */
+details{border-top:1px solid var(--line);padding:24px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-family:"Playfair Display",serif;font-size:21px;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--rust);font-family:Poppins,sans-serif;font-weight:300;font-size:26px;line-height:1}
+details[open] summary::after{content:"–"}
+details .t{margin-top:14px}
+/* contact */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.inquiry{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px}
+.inquiry a{display:block;text-align:center;text-decoration:none;padding:34px 20px;border:1px solid var(--ink);font-size:13px;letter-spacing:.22em;font-weight:500;transition:all .2s}
+.inquiry a:hover{background:var(--ink);color:#fff}
+/* footer */
+footer{background:var(--paper);text-align:center;padding:60px 6vw;font-size:14px;border-top:1px solid var(--line)}
+footer .flogo img{height:90px;width:auto;margin:0 auto 18px}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin:18px 0}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:var(--rust)}
+@media (max-width:900px){
+ .nav ul{display:none}.menu-btn{display:block;justify-self:end}.nav .logo{grid-column:2}.nav .logo img{height:72px}
+ .mobile-menu.open{display:block;position:fixed;inset:0;background:var(--paper);z-index:20;padding:40px 8vw;color:var(--ink)}
+ .mobile-menu ul{list-style:none;margin-top:60px}
+ .mobile-menu li a{display:block;text-decoration:none;font-family:"Playfair Display",serif;font-size:30px;padding:8px 0}
+ .mobile-menu .close{background:none;border:0;font:inherit;font-size:15px;float:right;cursor:pointer}
+ section{padding:72px 7vw}
+ .tiles,.split,.tiers,.steps,.inquiry,.pair{grid-template-columns:1fr}
+ .split.rev>:first-child{order:0}
+ .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .quote{grid-template-columns:1fr;gap:28px}.quotes{min-height:780px}
+ .masonry{columns:2 160px}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li></ul>
+    <a class="logo" href="../" aria-label="Intricate Exposures home"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
+    <ul><li><a href="../weddings/">Wedding</a></li><li><a href="../portraits/" class="on">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/">Contact</a></li></ul>
+    <button class="menu-btn" onclick="document.getElementById('mm').classList.add('open')">Menu</button>
+  </nav>
+  <div class="mobile-menu" id="mm"><button class="close" onclick="document.getElementById('mm').classList.remove('open')">Close</button><ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../weddings/">Wedding</a></li><li><a href="../portraits/" class="on">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/">Contact</a></li></ul></div>
+</header>
+<main>
+<section class="page-head"><div class="narrow"><div class="t"><h4>Portraits</h4></div><div class="lead"><div class="t"><p>Although weddings are my main gig- I adore photographing all stages of life. This is even more important to me now that I've gotten older. I would love to work with you to fully customize a portrait session to fit exactly what you're imagining, or just do my fine art thing.</p><p>I love to revisit with previous wedding clients to photograph their growing families, starting with Maternity sessions, and moving to newborns and then family portraits!</p><p>My love for photography started with portraits. Senior portraits give me the gift of making young people feel beautiful and confident while transitioning to adulthood. </p><p>Headshots and lifestyle sessions will help you truly see your business for the amazing endeavor it is! </p></div></div></div></section>
+<section class="white"><div class="wrap"><div class="masonry"><img src="https://images-pw.pixieset.com/site/gxmmvP/8D9rap/izzysenior-3-a72561e3-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/yGQeL1/Mmat-47-b911f9e3-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/omlO6P/paige-109-05696dc7-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/1DQmWz/grandrapids-80-786abccf-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/5Dwr3e/K5thfamily2025-148-d492e01b-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/X43rVA/K5thfamily2025-199-f141bd4a-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/QO1ry3/joe46-cbc4b9eb-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/WplZP3/izzysenior-188-3587a0c5-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/omlOXJ/K5thfamily2025-257-75f82cf9-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/qz8jlb/julia26bw-66-6bf6734d-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/xqyGar/simon26-63-8544816e-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/9D1k8e/grandrapids-5-8add3e3c-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/MLwrwX/kavysenior-93-fe42b557-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/qz871M/E6AAB413-288A-460C-B694-7167F67F8B7F-510cdd0e-2500.jpeg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/pO3zxG/gus-38-1b29eadc-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/bWavVM/julia26-24-4e252e1c-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/GQPrmJ/K5thfamily2025-107-87e024f8-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/GQPrkx/simon26-34-2481c77e-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/3rYdYw/kavysenior-27-dec1af18-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/RzmrvE/K5thfamily2025-191-03f63fb9-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/VbkrQr/kuehlamily25-7-8b19abec-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/Pm9rwD/kara_28-8e328878-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/EkWrEY/family2025-3-7eeff3f6-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/qz8jqr/K5thfamily2025-85-37dc2b2b-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/4DVrlx/K5thfamily2025-54-c56ba9d8-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/knOLbJ/family2025-95-ced3fc25-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/6DnrnO/kavysenior-77-0cf537a4-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/AM8AR7/family2025-78-3c647ed6-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/8D9rjZ/kara_100-6661632a-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/pO3z0G/julia26-25-bc92acef-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/Pm9rOx/erica65-90bc4c42-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/pO3z5o/grady15-a22b8f72-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/5Dwr5o/simon26-45-77f3039d-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/bWavJe/K5thfamily2025-8-96196d3b-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/7DLrAr/erica18-31790a52-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/dPVybD/family2025-17-8c587105-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/dPVy5R/paige-106-a4ac2bd7-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/GQPrl6/ML-2-09249951-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/GQP8A3/F76BF1A7-BC6B-4D41-A066-244F5FE3BA7E-e130d2dd-2500.jpeg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/WplZVG/keatonnb-15-cfb06051-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/4DVrXo/grady22-87f8d223-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/qz8jpJ/ML-32-b9189682-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/MLwrdG/izzysenior-94-7041be41-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/EkWr9A/K5thfamily2025-235-268ae81a-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/ZG60Yy/family2025-60-9da138c6-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/GQPrXR/grady89-c23ecca7-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/LnVrlq/kuehlamily25-67-9c3baf97-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/dPVyE1/K5thfamily2025-244-d43d6ae9-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/rj6KxL/family2025-47-6f16ba35-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/yGQeD1/joe31-39733b18-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/4DVrE0/ML-56-4baf1471-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/Pm9rdW/Mmat-34-9cc2a4b2-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/EkWrl7/paige-60-561ba924-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/eywQq4/K5thfamily2025-139-7557a60b-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/vpv4Jb/erica57-620bceb1-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/omlObw/family2025-24-2d9d3715-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/6Dnry3/izzysenior-65-82f63cb2-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/pO3zWP/K5thfamily2025-40-64aeefc8-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/JVar9X/julia26-4-efe0680c-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/Pm9r8o/izzysenior-215-66f56426-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/Dv7rRv/family2025-37-df2ab5e6-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/n10mZ9/kuehlamily25-31-6e8c2d64-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/8D9r9D/kavysenior-45-2c762deb-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/7DLrLA/kavysenior-130-49332920-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/3rYd9A/kara_64-94d6e1d9-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/lLz9z5/kavysenior-9-7f04e908-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/w4PqGa/kuehlamily25-23-79ae291f-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/X43rmR/paige-4-81d0fc74-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/WplZ41/erica32-c3ce88a1-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/WplZlM/kavysenior-165-bb84abd3-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/eywQ9o/simon26-39-d636458d-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/vpv4L8/keatonnb-29-6e752641-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/vpv4xW/izzysenior-204-9442e6d5-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/7DLrQG/izzysenior-93-c7302236-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/Pm9rPW/joe1-894f34cb-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/QO1rA3/Mmat-108-4ba67b10-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/4DVrKL/julia26-33-9941f1be-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/vpv4vD/kavysenior-196-1a41edc3-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/0DkRww/kara_37-c7a4253a-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/qz8j04/grady44-754f50d0-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/xqyG0l/K5thfamily2025-168-262562e8-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/bWav5M/gus-8-ecce2f31-2500.jpg" alt="" loading="lazy"></div></div></section>
+<section class=""><div class="narrow"><div class="t"><h3>Get in touch </h3></div><div class="t"><p>Photographs for the Sentimental</p></div></div></section>
+</main>
+<footer>
+  <a class="flogo" href="../"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
+  <nav aria-label="Footer"><a href="../">Home</a><a href="../about/">About</a><a href="../experience/">Experience</a><a href="../pricing/">Pricing</a><a href="../weddings/">Wedding</a><a href="../portraits/">Portraiture</a><a href="https://www.intricateexposures.com/blog/">Blog</a><a href="../contact/">Contact</a></nav>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact - Intricate Exposures</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--rust:#B5462A;--rust-dark:#9a3a22;--blush:#F1B9A6;--ink:#2A3232;--paper:#F7F4F1;--mist:#D4CFD3;--line:#E4DED9}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.7;font-size:16px}
+a{color:inherit}
+img{max-width:100%;display:block}
+/* header */
+.site-header{position:relative;z-index:10;padding:26px 4vw;background:var(--paper)}
+.site-header.over{position:absolute;top:0;left:0;right:0;background:none}
+.nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2vw}
+.nav ul{list-style:none;display:flex;justify-content:space-around;gap:1.5vw}
+.nav a{text-decoration:none;font-size:clamp(14px,1.1vw,17px);font-weight:300;transition:opacity .2s}
+.nav a:hover{opacity:.65}
+.nav a.on{color:var(--rust);font-weight:400}
+.over .nav a{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.2)}
+.over .nav a.on{color:#fff;text-decoration:underline;text-underline-offset:6px}
+.nav .logo img{height:clamp(80px,9vw,130px);width:auto}
+.menu-btn{display:none;background:none;border:0;font:inherit;font-size:15px;cursor:pointer;color:inherit}
+.over .menu-btn{color:#fff}
+.mobile-menu{display:none}
+/* type */
+.label{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);font-weight:500;display:block;margin-bottom:1em}
+h1,h2,h3,h4{font-family:"Playfair Display",serif;font-weight:400;line-height:1.12}
+.t h1,.t h2{font-size:clamp(34px,4vw,56px);margin-bottom:.5em}
+.t h3,.t h4{font-size:clamp(26px,2.6vw,36px);margin-bottom:.5em}
+.t h5,.t h6{font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);font-weight:500;margin:0 0 1.1em}
+.t p{margin-bottom:.9em}
+.t p:last-child{margin-bottom:0}
+.t u{text-decoration-color:var(--rust);text-underline-offset:3px}
+.lead{font-size:clamp(16px,1.25vw,19px)}
+/* layout */
+section{padding:100px 6vw}
+.wrap{max-width:1120px;margin:0 auto}
+.narrow{max-width:720px;margin:0 auto}
+.center{text-align:center}
+.white{background:#fff}.mist{background:var(--mist)}.dark{background:var(--ink);color:#fff}
+.dark .label,.dark .t h5,.dark .t h6{color:var(--blush)}
+.page-head{padding:60px 6vw 70px;text-align:center}
+.page-head h1{font-size:clamp(44px,6vw,84px)}
+.page-head h1 em{color:var(--rust)}
+/* buttons */
+.btn{display:inline-block;text-decoration:none;font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;padding:16px 34px;border:1px solid var(--rust);background:var(--rust);color:#fff;transition:all .2s}
+.btn:hover{background:var(--rust-dark);border-color:var(--rust-dark)}
+.btn.ghost{background:none;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--ink)}
+.btn.line{background:none;color:var(--ink);border-color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.center .btn-row{justify-content:center}
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:#fff;padding:0 6vw 12vh;overflow:hidden;background:#2a3232}
+.hero .slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.4s ease}
+.hero .slide.on{opacity:1}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.38) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 50%,rgba(0,0,0,.55) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:860px}
+.hero .t h6,.hero .t h5{color:#fff;margin:0}
+.hero .t h1{font-size:clamp(48px,7vw,96px);margin:.25em 0 .3em}
+.hero .t p{display:none}
+.hero .btn-row{justify-content:center}
+/* tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.tile{position:relative;display:block;aspect-ratio:3/4;overflow:hidden;text-decoration:none;color:#fff}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.tile:hover img{transform:scale(1.04)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,22,22,.75),rgba(20,22,22,0) 55%)}
+.tile .cap{position:absolute;left:28px;right:28px;bottom:26px;z-index:2}
+.tile .cap .t h2{font-size:36px;margin:0 0 .2em}
+.tile .cap .t h6{color:var(--blush);margin:0}
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.split.rev>:first-child{order:2}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pair img,.split img{width:100%;height:100%;object-fit:cover}
+.single img{width:100%;max-height:85vh;object-fit:cover}
+/* masonry gallery */
+.masonry{columns:3 300px;column-gap:14px}
+.masonry img{width:100%;margin-bottom:14px;break-inside:avoid;background:var(--line)}
+/* pricing */
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:stretch}
+.tier{background:var(--paper);border:1px solid var(--line);padding:42px 34px;display:flex;flex-direction:column}
+.tier.feat{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tier .t h1{font-size:40px;margin-bottom:.15em}
+.tier .price{font-family:"Playfair Display",serif;font-size:42px;color:var(--rust);margin:.2em 0 .6em}
+.tier.feat .price{color:var(--blush)}
+.tier .t p{margin-bottom:.35em;font-size:15px}
+.tier .tier-img{margin:-42px -34px 30px;aspect-ratio:4/3;overflow:hidden}
+.tier .tier-img img{width:100%;height:100%;object-fit:cover}
+.sessions{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.session{background:#fff;display:flex;flex-direction:column}
+.session .s-img{aspect-ratio:4/5;overflow:hidden}
+.session .s-img img{width:100%;height:100%;object-fit:cover}
+.session .s-body{padding:30px 30px 34px;display:flex;flex-direction:column;flex:1}
+.session .t h2{font-size:30px;margin-bottom:.4em}
+.session .t p{margin-bottom:.3em;font-size:15px}
+.session .s-price{margin-top:auto;padding-top:18px;font-family:"Playfair Display",serif;font-size:30px;color:var(--rust)}
+.session .s-price h5{font-family:inherit;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit;font-weight:400;margin:0}
+/* testimonials */
+.quotes{position:relative;min-height:340px}
+.quote{position:absolute;inset:0;opacity:0;transition:opacity .9s;display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:center;pointer-events:none}
+.quote.on{opacity:1;pointer-events:auto}
+.quote img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.quote .t p{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(19px,1.6vw,23px);line-height:1.55}
+.quote .t h4{font-family:Poppins,sans-serif;font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust);font-weight:500;margin-top:1.2em}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:34px}
+.dots button{width:10px;height:10px;border-radius:50%;border:1px solid var(--rust);background:none;cursor:pointer;padding:0}
+.dots button.on{background:var(--rust)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 72px;margin-top:60px}
+.step .t h5{margin-bottom:.6em}
+.step .t h2{font-size:30px;margin-bottom:.45em}
+/* faq */
+details{border-top:1px solid var(--line);padding:24px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-family:"Playfair Display",serif;font-size:21px;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--rust);font-family:Poppins,sans-serif;font-weight:300;font-size:26px;line-height:1}
+details[open] summary::after{content:"–"}
+details .t{margin-top:14px}
+/* contact */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.strip img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.inquiry{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:40px}
+.inquiry a{display:block;text-align:center;text-decoration:none;padding:34px 20px;border:1px solid var(--ink);font-size:13px;letter-spacing:.22em;font-weight:500;transition:all .2s}
+.inquiry a:hover{background:var(--ink);color:#fff}
+/* footer */
+footer{background:var(--paper);text-align:center;padding:60px 6vw;font-size:14px;border-top:1px solid var(--line)}
+footer .flogo img{height:90px;width:auto;margin:0 auto 18px}
+footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin:18px 0}
+footer nav a{text-decoration:none}
+footer nav a:hover{color:var(--rust)}
+@media (max-width:900px){
+ .nav ul{display:none}.menu-btn{display:block;justify-self:end}.nav .logo{grid-column:2}.nav .logo img{height:72px}
+ .mobile-menu.open{display:block;position:fixed;inset:0;background:var(--paper);z-index:20;padding:40px 8vw;color:var(--ink)}
+ .mobile-menu ul{list-style:none;margin-top:60px}
+ .mobile-menu li a{display:block;text-decoration:none;font-family:"Playfair Display",serif;font-size:30px;padding:8px 0}
+ .mobile-menu .close{background:none;border:0;font:inherit;font-size:15px;float:right;cursor:pointer}
+ section{padding:72px 7vw}
+ .tiles,.split,.tiers,.steps,.inquiry,.pair{grid-template-columns:1fr}
+ .split.rev>:first-child{order:0}
+ .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .quote{grid-template-columns:1fr;gap:28px}.quotes{min-height:780px}
+ .masonry{columns:2 160px}
+}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li></ul>
+    <a class="logo" href="../" aria-label="Intricate Exposures home"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
+    <ul><li><a href="../weddings/">Wedding</a></li><li><a href="../portraits/">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/" class="on">Contact</a></li></ul>
+    <button class="menu-btn" onclick="document.getElementById('mm').classList.add('open')">Menu</button>
+  </nav>
+  <div class="mobile-menu" id="mm"><button class="close" onclick="document.getElementById('mm').classList.remove('open')">Close</button><ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../weddings/">Wedding</a></li><li><a href="../portraits/">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/" class="on">Contact</a></li></ul></div>
+</header>
+<main>
+<section style="padding-top:40px"><div class="wrap"><div class="strip"><img src="https://images-pw.pixieset.com/site/gxmmvP/w4P5dG/cook546-38e3dc2b-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/EkW14q/abbott_611-d4b8cc1f-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/AM8wzR/radell-022-d8239145-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/a7QyYR/lovell-517-dc317569-2500.jpg" alt="" loading="lazy"></div></div></section>
+<section class="white"><div class="narrow center lead"><div class="t"><p>If forms are not loading, please EMAIL us at <a href="mailto:intricateexposures@gmail.com">intricateexposures@gmail.com</a></p></div>
+  <div class="inquiry"><a href="https://www.intricateexposures.com/contact/">WEDDING INQUIRIES</a><a href="https://www.intricateexposures.com/contact/">PORTRAIT INQUIRIES</a></div></div></section>
+<section><div class="wrap"><div class="strip"><img src="https://images-pw.pixieset.com/site/gxmmvP/8D97Pd/felix-21-a61449bd-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/a7QyPY/simon26-47-f1ed1607-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/lLz9Pe/K5thfamily2025-6-a506fea7-2500.jpg" alt="" loading="lazy"><img src="https://images-pw.pixieset.com/site/gxmmvP/rj6K08/ella26-29-e26136ab-2500.jpg" alt="" loading="lazy"></div></div></section>
+</main>
+<footer>
+  <a class="flogo" href="../"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
+  <nav aria-label="Footer"><a href="../">Home</a><a href="../about/">About</a><a href="../experience/">Experience</a><a href="../pricing/">Pricing</a><a href="../weddings/">Wedding</a><a href="../portraits/">Portraiture</a><a href="https://www.intricateexposures.com/blog/">Blog</a><a href="../contact/">Contact</a></nav>
+</footer>
+
+</body>
+</html>
