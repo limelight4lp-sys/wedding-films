@@ -153,11 +153,14 @@ footer nav a:hover{color:var(--blush)}
  .nav .logo{grid-column:1;justify-self:start}
  .nav .logo img{height:52px}
  .menu-btn{display:block;grid-column:3;justify-self:end}
- .mobile-menu.open{display:flex;flex-direction:column;position:fixed;inset:0;background:var(--bg);z-index:50;padding:22px 7vw;color:var(--ink);overflow-y:auto}
- .mobile-menu .close{align-self:flex-end;background:none;border:1px solid var(--line);color:var(--ink);font:inherit;font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:10px 14px;cursor:pointer}
- .mobile-menu ul{list-style:none;margin-top:36px}
- .mobile-menu li{border-bottom:1px solid var(--line)}
- .mobile-menu li a{display:block;text-decoration:none;font-family:"Playfair Display",serif;font-size:30px;padding:14px 0}
+ .mobile-menu{display:block;position:absolute;left:0;right:0;top:100%;background:rgba(23,26,26,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .35s ease,opacity .25s ease,visibility 0s .35s}
+ .mobile-menu.open{max-height:80vh;opacity:1;visibility:visible;transition:max-height .35s ease,opacity .25s ease}
+ .mobile-menu ul{list-style:none;padding:6px 5vw 14px}
+ .mobile-menu li+li{border-top:1px solid var(--line)}
+ .mobile-menu li a{display:block;text-decoration:none;color:var(--ink);font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:15px 0}
+ .mobile-menu li a.on{color:var(--blush)}
+ .site-header.menu-open{background:rgba(23,26,26,.97)}
+ .site-header.over.menu-open .menu-btn{color:var(--ink);border-color:var(--line)}
  section{padding:64px 6vw}
  .full{padding:var(--gap) 0}
  .page-head{padding:56px 6vw 36px}
@@ -189,9 +192,11 @@ footer nav a:hover{color:var(--blush)}
     <ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li></ul>
     <a class="logo" href="../" aria-label="Intricate Exposures home"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
     <ul><li><a href="../weddings/" class="on">Wedding</a></li><li><a href="../portraits/">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/">Contact</a></li></ul>
-    <button class="menu-btn" onclick="document.getElementById('mm').classList.add('open')">Menu</button>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mm" onclick="toggleMenu(this)">Menu</button>
   </nav>
-  <div class="mobile-menu" id="mm"><button class="close" onclick="document.getElementById('mm').classList.remove('open')">Close</button><ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../weddings/" class="on">Wedding</a></li><li><a href="../portraits/">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/">Contact</a></li></ul></div>
+  <div class="mobile-menu" id="mm"><ul><li><a href="../">Home</a></li><li><a href="../about/">About</a></li><li><a href="../experience/">Experience</a></li><li><a href="../pricing/">Pricing</a></li><li><a href="../weddings/" class="on">Wedding</a></li><li><a href="../portraits/">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="../contact/">Contact</a></li></ul></div>
+  <script>function toggleMenu(b){var m=document.getElementById('mm'),o=m.classList.toggle('open');b.closest('header').classList.toggle('menu-open',o);b.textContent=o?'Close':'Menu';b.setAttribute('aria-expanded',o)}
+  document.addEventListener('click',function(e){var m=document.getElementById('mm');if(m.classList.contains('open')&&!e.target.closest('.site-header')){toggleMenu(document.querySelector('.menu-btn'))}});</script>
 </header>
 <main>
 <section class="page-head"><div class="narrow"><div class="t"><h4>Weddings</h4></div><div class="lead"><div class="t"><p>Over 10 years and 300 weddings, I've learned to make sure every wedding has a good recipe.</p><p>Classic, beautiful wedding day details,</p><p>Candid images with feeling,</p><p>+</p><p>Portraits that include art and trends, while feeling natural.</p><p>Weddings in 2026 and beyond will also include 35mm film!</p><p>I love to photograph intimate elopements, big weddings and new cultures!﻿</p></div></div></div></section>
