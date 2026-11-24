@@ -45,8 +45,9 @@ section{padding:110px 6vw}
 .center{text-align:center}
 section:nth-of-type(even){background:var(--bg2)}
 .page-head{padding:90px 6vw 60px;text-align:center}
-.full{padding-left:0;padding-right:0}
+.full{padding:var(--gap) 0}
 .full>.wrap{max-width:none}
+.page-head .t h1,.page-head .t h2,.page-head .t h3,.page-head .t h4{font-size:clamp(40px,6vw,80px);margin-bottom:.35em}
 /* buttons */
 .btn{display:inline-block;text-decoration:none;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:17px 36px;border:1px solid var(--rust);background:var(--rust);color:#fff;transition:all .25s}
 .btn:hover{background:transparent;color:var(--blush);border-color:var(--blush)}
@@ -158,7 +159,7 @@ footer nav a:hover{color:var(--blush)}
  .mobile-menu li{border-bottom:1px solid var(--line)}
  .mobile-menu li a{display:block;text-decoration:none;font-family:"Playfair Display",serif;font-size:30px;padding:14px 0}
  section{padding:64px 6vw}
- .full{padding-left:0;padding-right:0}
+ .full{padding:var(--gap) 0}
  .page-head{padding:56px 6vw 36px}
  .hero{padding:0 7vw 10vh}
  .hero .t h1{font-size:clamp(40px,12vw,64px)}
