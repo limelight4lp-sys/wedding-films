@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Intricate Exposures - Grand Rapids Wedding Photographer</title>
-<meta name="robots" content="noindex">
+<meta name="description" content="Intricate Exposures is a Grand Rapids, Michigan wedding and portrait photographer. Images with magic, photography since 2012.">
+<link rel="canonical" href="https://www.intricateexposures.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Intricate Exposures">
+<meta property="og:title" content="Intricate Exposures - Grand Rapids Wedding Photographer">
+<meta property="og:description" content="Intricate Exposures is a Grand Rapids, Michigan wedding and portrait photographer. Images with magic, photography since 2012.">
+<meta property="og:url" content="https://www.intricateexposures.com/">
+<meta property="og:image" content="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#171A1A;--bg2:#1F2323;--card:#252A2A;--ink:#ECE6E0;--muted:#A8A19A;--rust:#C9583A;--rust-dark:#B04A2F;--blush:#F1B9A6;--line:rgba(236,230,224,.12);--gap:4px}
@@ -29,10 +37,10 @@ img{max-width:100%;display:block}
 .mobile-menu{display:none}
 /* type */
 .label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--blush);font-weight:500;display:block;margin-bottom:1em}
-h1,h2,h3,h4{font-family:"Playfair Display",serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
-.t h1,.t h2{font-size:clamp(32px,4.2vw,60px);margin-bottom:.5em}
-.t h3,.t h4{font-size:clamp(24px,2.6vw,36px);margin-bottom:.5em}
-.t h5,.t h6{font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--blush);font-weight:500;margin:0 0 1.2em}
+:is(h1,.h1),:is(h2,.h2),:is(h3,.h3),:is(h4,.h4){font-family:"Playfair Display",serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+.t :is(h1,.h1),.t :is(h2,.h2){font-size:clamp(32px,4.2vw,60px);margin-bottom:.5em}
+.t :is(h3,.h3),.t :is(h4,.h4){font-size:clamp(24px,2.6vw,36px);margin-bottom:.5em}
+.t :is(h5,.h5),.t :is(h6,.h6){font-family:Poppins,sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--blush);font-weight:500;margin:0 0 1.2em}
 .t p{margin-bottom:.9em;color:var(--ink)}
 .t p:last-child{margin-bottom:0}
 .t u{text-decoration-color:var(--rust);text-underline-offset:3px}
@@ -47,7 +55,7 @@ section:nth-of-type(even){background:var(--bg2)}
 .page-head{padding:90px 6vw 60px;text-align:center}
 .full{padding:var(--gap) 0}
 .full>.wrap{max-width:none}
-.page-head .t h1,.page-head .t h2,.page-head .t h3,.page-head .t h4{font-size:clamp(40px,6vw,80px);margin-bottom:.35em}
+.page-head .t :is(h1,.h1),.page-head .t :is(h2,.h2),.page-head .t :is(h3,.h3),.page-head .t :is(h4,.h4){font-size:clamp(40px,6vw,80px);margin-bottom:.35em}
 /* buttons */
 .btn{display:inline-block;text-decoration:none;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:17px 36px;border:1px solid var(--rust);background:var(--rust);color:#fff;transition:all .25s}
 .btn:hover{background:transparent;color:var(--blush);border-color:var(--blush)}
@@ -61,8 +69,8 @@ section:nth-of-type(even){background:var(--bg2)}
 .hero .slide.on{opacity:1;transform:scale(1)}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(0,0,0,.5) 0%,rgba(0,0,0,.05) 32%,rgba(0,0,0,.1) 55%,rgba(0,0,0,.75) 100%)}
 .hero-inner{position:relative;z-index:2;max-width:880px}
-.hero .t h6,.hero .t h5{color:#fff;margin:0;opacity:.9}
-.hero .t h1{font-size:clamp(46px,7.5vw,104px);margin:.22em 0 .3em}
+.hero .t :is(h6,.h6),.hero .t :is(h5,.h5){color:#fff;margin:0;opacity:.9}
+.hero .t :is(h1,.h1){font-size:clamp(46px,7.5vw,104px);margin:.22em 0 .3em}
 .hero .t p{display:none}
 .hero .btn-row{justify-content:center}
 /* tiles */
@@ -72,8 +80,8 @@ section:nth-of-type(even){background:var(--bg2)}
 .tile:hover img{transform:scale(1.05)}
 .tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,12,12,.85),rgba(10,12,12,0) 55%)}
 .tile .cap{position:absolute;left:30px;right:30px;bottom:28px;z-index:2}
-.tile .cap .t h2{font-size:clamp(28px,2.6vw,40px);margin:0 0 .25em}
-.tile .cap .t h6{margin:0}
+.tile .cap .t :is(h2,.h2){font-size:clamp(28px,2.6vw,40px);margin:0 0 .25em}
+.tile .cap .t :is(h6,.h6){margin:0}
 /* split */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 .split.rev>:first-child{order:2}
@@ -88,7 +96,7 @@ section:nth-of-type(even){background:var(--bg2)}
 .tier{background:var(--card);padding:46px 36px;display:flex;flex-direction:column}
 .tier.feat{background:#ECE6E0;color:#1B1F1F}
 .tier.feat .t p{color:#1B1F1F}
-.tier .t h1{font-size:42px;margin-bottom:.15em}
+.tier .t :is(h1,.h1){font-size:42px;margin-bottom:.15em}
 .tier .price{font-family:"Playfair Display",serif;font-size:44px;color:var(--blush);margin:.15em 0 .7em}
 .tier.feat .price{color:var(--rust)}
 .tier .t p{margin-bottom:.4em;font-size:15px;color:var(--muted)}
@@ -100,17 +108,17 @@ section:nth-of-type(even){background:var(--bg2)}
 .session .s-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
 .session:hover .s-img img{transform:scale(1.04)}
 .session .s-body{padding:30px 30px 34px;display:flex;flex-direction:column;flex:1}
-.session .t h2{font-size:30px;margin-bottom:.4em}
+.session .t :is(h2,.h2){font-size:30px;margin-bottom:.4em}
 .session .t p{margin-bottom:.3em;font-size:15px;color:var(--muted)}
 .session .s-price{margin-top:auto;padding-top:18px;font-family:"Playfair Display",serif;font-size:30px;color:var(--blush)}
-.session .s-price h5{font-family:inherit;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit;font-weight:400;margin:0}
+.session .s-price :is(h5,.h5){font-family:inherit;font-size:inherit;letter-spacing:0;text-transform:none;color:inherit;font-weight:400;margin:0}
 /* testimonials */
 .quotes{display:grid}
 .quote{grid-area:1/1;opacity:0;transition:opacity .9s;display:grid;grid-template-columns:1fr 1.3fr;gap:70px;align-items:center;pointer-events:none}
 .quote.on{opacity:1;pointer-events:auto}
 .quote img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .quote .t p{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(19px,1.7vw,24px);line-height:1.55}
-.quote .t h4{font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--blush);font-weight:500;margin-top:1.3em}
+.quote .t :is(h4,.h4){font-family:Poppins,sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--blush);font-weight:500;margin-top:1.3em}
 .dots{display:flex;gap:4px;justify-content:center;margin-top:36px}
 .dots button{width:28px;height:28px;border:0;background:none;cursor:pointer;padding:0;position:relative}
 .dots button::after{content:"";position:absolute;left:4px;right:4px;top:13px;height:2px;background:var(--line);transition:background .3s}
@@ -118,8 +126,8 @@ section:nth-of-type(even){background:var(--bg2)}
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px 80px;margin-top:64px;counter-reset:s}
 .step{border-top:1px solid var(--line);padding-top:28px}
-.step .t h5{margin-bottom:.7em}
-.step .t h2{font-size:clamp(24px,2.2vw,30px);margin-bottom:.45em}
+.step .t :is(h5,.h5){margin-bottom:.7em}
+.step .t :is(h2,.h2){font-size:clamp(24px,2.2vw,30px);margin-bottom:.45em}
 .step .t p{color:var(--muted)}
 /* faq */
 details{border-top:1px solid var(--line);padding:26px 0}
@@ -165,7 +173,7 @@ footer nav a:hover{color:var(--blush)}
  .full{padding:var(--gap) 0}
  .page-head{padding:56px 6vw 36px}
  .hero{padding:0 7vw 42vh}
- .hero .t h1{font-size:clamp(40px,12vw,64px)}
+ .hero .t :is(h1,.h1){font-size:clamp(40px,12vw,64px)}
  .tiles{grid-template-columns:1fr}
  .tile{aspect-ratio:4/3}
  .split{grid-template-columns:1fr;gap:34px}
@@ -184,13 +192,13 @@ footer nav a:hover{color:var(--blush)}
  .inquiry a{padding:28px 16px}
  footer{padding:48px 6vw}
 }
-</style>
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}p.h5,p.h6{margin-top:0}</style>
 </head>
 <body>
 <header class="site-header over">
   <nav class="nav" aria-label="Main">
     <ul><li><a href="./" class="on">Home</a></li><li><a href="about/">About</a></li><li><a href="experience/">Experience</a></li><li><a href="pricing/">Pricing</a></li></ul>
-    <a class="logo" href="./" aria-label="Intricate Exposures home"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
+    <a class="logo" href="./" aria-label="Intricate Exposures home"><img decoding="async" src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures logo"></a>
     <ul><li><a href="weddings/">Wedding</a></li><li><a href="portraits/">Portraiture</a></li><li><a href="https://www.intricateexposures.com/blog/">Blog</a></li><li><a href="contact/">Contact</a></li></ul>
     <button class="menu-btn" aria-expanded="false" aria-controls="mm" onclick="toggleMenu(this)">Menu</button>
   </nav>
@@ -199,15 +207,15 @@ footer nav a:hover{color:var(--blush)}
   document.addEventListener('click',function(e){var m=document.getElementById('mm');if(m.classList.contains('open')&&!e.target.closest('.site-header')){toggleMenu(document.querySelector('.menu-btn'))}});</script>
 </header>
 <main>
-<section class="hero"><img src="https://images-pw.pixieset.com/site/gxmmvP/krXDZ0/roywedding-5-148be1a7-2500.jpg" alt="" class="slide on"><img src="https://images-pw.pixieset.com/site/gxmmvP/lL56n0/cronindb-374-ad0a53d4-2500.jpg" alt="" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/WmonLa/erth-384-fe369d50-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/OaKvAk/CDWED-115-17139b19-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/nmm7dy/MPWED-279-a34fc3e7-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/m9YWXj/vo-gier-751-fc11bbe8-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/wqqlOE/MPWED-160-b46dc79c-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/3ra8z8/Calkins-389-3ccd930a-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/kn5zRz/lehman-550-469fafb2-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/9D7YJG/Calkins-024-8e47a8aa-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/GQDj4r/radell-034-e301d3f1-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/MLQVlj/cc-42-76ab5711-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/7D1JWY/eckert-356-c1dacb66-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/dP6kOY/schoonmaker-99-8a8c70fd-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/8DLvel/gowman-836-fdead238-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/QOwAM3/Horn-Cronin1130-9aa02e33-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/QOD7X7/lehman-33-37ee5eb7-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/m9YWRj/vo-gier-501-014aa4e4-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/dPDG3p/berkey-792-e5c7d2f5-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/a7l1p1/Horn-Cronin898-3b656823-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/ZGDrVl/radell-075-4a007006-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/jwyA3q/kellogg-214-d724a112-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/bW5om8/veurink-34-9625dca3-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/JVDmAy/lovell-620-30e911b3-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/VbZy0d/he-196-facf66c1-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/VbmKWd/teeples-27-66e2da6b-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/yGJLmn/fox-90-492becdb-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/Ek8OKR/nawrot-19-783bf20e-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/3rwm78/skinner-7-ab620956-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/jw54LE/KGWED-703-4a26c524-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/6D9KPo/plz-147-e9e98476-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/Ln3z68/Calkins-007-2f82eeba-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/LnDlwq/wren-1042-b0c6636f-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/8elZpl/erth-401-1fa60cb7-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/6q4ZJb/erth-379-af9a0364-2500.jpg" alt="" loading="lazy" class="slide"><img src="https://images-pw.pixieset.com/site/gxmmvP/m0ADWD/CDWED-77-e5a419ea-2500.jpg" alt="" loading="lazy" class="slide">
-  <div class="hero-inner"><div class="t"><h6>based in Grand Rapids, Michigan</h6><h1>Images with Magic</h1><h5>photography Since 2012</h5></div><div class="btn-row"><a class="btn ghost" href="about/">More About Me</a></div></div>
+<section class="hero"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/krXDZ0/roywedding-5-148be1a7-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" class="slide on"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/lL56n0/cronindb-374-ad0a53d4-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/WmonLa/erth-384-fe369d50-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/OaKvAk/CDWED-115-17139b19-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/nmm7dy/MPWED-279-a34fc3e7-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/m9YWXj/vo-gier-751-fc11bbe8-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/wqqlOE/MPWED-160-b46dc79c-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/3ra8z8/Calkins-389-3ccd930a-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/kn5zRz/lehman-550-469fafb2-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/9D7YJG/Calkins-024-8e47a8aa-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/GQDj4r/radell-034-e301d3f1-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/MLQVlj/cc-42-76ab5711-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/7D1JWY/eckert-356-c1dacb66-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/dP6kOY/schoonmaker-99-8a8c70fd-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/8DLvel/gowman-836-fdead238-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/QOwAM3/Horn-Cronin1130-9aa02e33-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/QOD7X7/lehman-33-37ee5eb7-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/m9YWRj/vo-gier-501-014aa4e4-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/dPDG3p/berkey-792-e5c7d2f5-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/a7l1p1/Horn-Cronin898-3b656823-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/ZGDrVl/radell-075-4a007006-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/jwyA3q/kellogg-214-d724a112-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/bW5om8/veurink-34-9625dca3-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/JVDmAy/lovell-620-30e911b3-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/VbZy0d/he-196-facf66c1-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/VbmKWd/teeples-27-66e2da6b-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/yGJLmn/fox-90-492becdb-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/Ek8OKR/nawrot-19-783bf20e-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/3rwm78/skinner-7-ab620956-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/jw54LE/KGWED-703-4a26c524-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/6D9KPo/plz-147-e9e98476-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/Ln3z68/Calkins-007-2f82eeba-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/LnDlwq/wren-1042-b0c6636f-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/8elZpl/erth-401-1fa60cb7-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/6q4ZJb/erth-379-af9a0364-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/m0ADWD/CDWED-77-e5a419ea-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy" class="slide">
+  <div class="hero-inner"><div class="t"><p class="h6">based in Grand Rapids, Michigan</p><h1>Images with Magic</h1><p class="h5">photography Since 2012</p></div><div class="btn-row"><a class="btn ghost" href="about/">More About Me</a></div></div>
 </section>
-<section><div class="wrap"><div class="tiles"><a class="tile" href="weddings/"><img src="https://images-pw.pixieset.com/site/gxmmvP/pO3J7q/weston_412-ff1e5c29-2500.jpg" alt="" loading="lazy"><div class="cap"><div class="t"><h2>Weddings</h2></div><div class="t"><h6>View Portfolio</h6></div></div></a><a class="tile" href="portraits/"><img src="https://images-pw.pixieset.com/site/gxmmvP/5Dwr3e/K5thfamily2025-148-d492e01b-2500.jpg" alt="" loading="lazy"><div class="cap"><div class="t"><h2>Portraiture</h2></div><div class="t"><h6>View Portfolio</h6></div></div></a><a class="tile" href="pricing/"><img src="https://images-pw.pixieset.com/site/gxmmvP/Rzm7wj/radell-013-9ece8f21-2500.jpg" alt="" loading="lazy"><div class="cap"><div class="t"><h2>Pricing</h2></div><div class="t"><h6>and more</h6></div></div></a></div>
+<section><div class="wrap"><div class="tiles"><a class="tile" href="weddings/"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/pO3J7q/weston_412-ff1e5c29-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy"><div class="cap"><div class="t"><h2>Weddings</h2></div><div class="t"><p class="h6">View Portfolio</p></div></div></a><a class="tile" href="portraits/"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/5Dwr3e/K5thfamily2025-148-d492e01b-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy"><div class="cap"><div class="t"><h2>Portraiture</h2></div><div class="t"><p class="h6">View Portfolio</p></div></div></a><a class="tile" href="pricing/"><img decoding="async" src="https://images-pw.pixieset.com/site/gxmmvP/Rzm7wj/radell-013-9ece8f21-2500.jpg" alt="Wedding and portrait photography by Intricate Exposures, Grand Rapids, Michigan" loading="lazy"><div class="cap"><div class="t"><h2>Pricing</h2></div><div class="t"><p class="h6">and more</p></div></div></a></div>
   <div class="center"><div class="btn-row"><a class="btn " href="contact/">Contact</a></div></div></div></section>
-<section><div class="narrow center lead"><div class="t"><h1>For all humans</h1><p>We promise to serve you regardless of race, religion, disability, sexual orientation, gender identity or expression. You are valued, you are unique, you are irreplaceable. We can't wait to get to know you.</p></div></div></section>
+<section><div class="narrow center lead"><div class="t"><h2 class="h1">For all humans</h2><p>We promise to serve you regardless of race, religion, disability, sexual orientation, gender identity or expression. You are valued, you are unique, you are irreplaceable. We can't wait to get to know you.</p></div></div></section>
 </main>
 <footer>
-  <a class="flogo" href="./"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures"></a>
+  <a class="flogo" href="./"><img decoding="async" src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" alt="Intricate Exposures logo"></a>
   <nav aria-label="Footer"><a href="./">Home</a><a href="about/">About</a><a href="experience/">Experience</a><a href="pricing/">Pricing</a><a href="weddings/">Wedding</a><a href="portraits/">Portraiture</a><a href="https://www.intricateexposures.com/blog/">Blog</a><a href="contact/">Contact</a></nav>
 </footer>
 <script>(function(){var s=document.querySelectorAll('.hero .slide'),i=0;function nx(){var n=(i+1)%s.length;var im=s[n];if(im.loading==='lazy')im.loading='eager';s[i].classList.remove('on');im.classList.add('on');i=n}setInterval(nx,4500)})();</script>

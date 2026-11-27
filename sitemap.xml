@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://intricatecinema.com/</loc>
+    <lastmod>2026-11-26</lastmod>
+    <image:image><image:loc>https://intricatecinema.com/img/harley-dean-cinematographer.jpg</image:loc></image:image>
+    <video:video>
+      <video:thumbnail_loc>https://intricatecinema.com/media/kendra-gregory-poster.jpg</video:thumbnail_loc>
+      <video:title>Kendra &amp; Gregory wedding film</video:title>
+      <video:description>Wedding highlight film for Kendra and Gregory by Intricate Cinema.</video:description>
+      <video:content_loc>https://intricatecinema.com/media/kendra-gregory.mp4</video:content_loc>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://intricatecinema.com/media/jackson-lydia-poster.jpg</video:thumbnail_loc>
+      <video:title>Jackson &amp; Lydia same-night wedding film</video:title>
+      <video:description>Same-night wedding film for Jackson and Lydia, edited and shown at the reception, by Intricate Cinema.</video:description>
+      <video:content_loc>https://intricatecinema.com/media/jackson-lydia.mp4</video:content_loc>
+    </video:video>
+  </url>
+</urlset>
