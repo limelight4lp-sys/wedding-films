@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intricate Cinema | Wedding Videographer in Grand Rapids, Michigan (Preview)</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#012438">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="preload" as="image" href="/media/hero-poster-960.webp" media="(max-width:900px)" fetchpriority="high">
+<link rel="preload" as="image" href="/media/hero-poster.webp" media="(min-width:901px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="/fonts/playfair-display-latin-500-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-latin-300-normal.woff2" crossorigin>
+<style>
+  @font-face{font-family:Poppins;font-style:normal;font-weight:300;font-display:swap;src:url(/fonts/poppins-latin-300-normal.woff2) format("woff2")}
+  @font-face{font-family:Poppins;font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/poppins-latin-400-normal.woff2) format("woff2")}
+  @font-face{font-family:Poppins;font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/poppins-latin-500-normal.woff2) format("woff2")}
+  @font-face{font-family:"Playfair Display";font-style:normal;font-weight:500;font-display:swap;src:url(/fonts/playfair-display-latin-500-normal.woff2) format("woff2")}
+
+  /* 60-30-10: Foam White dominant, Deep Sea Blue secondary, Sunset Orange accent */
+  :root{
+    --foam:#DBF4FC;
+    --sea:#012438;
+    --sun:#F16F1B;
+    --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='.33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='2.4' intercept='-.7'/%3E%3CfeFuncG type='linear' slope='2.4' intercept='-.7'/%3E%3CfeFuncB type='linear' slope='2.4' intercept='-.7'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Poppins,sans-serif;font-weight:300;color:var(--sea);line-height:1.7;font-size:16px;
+    background-color:var(--foam);background-image:var(--grain);background-blend-mode:soft-light}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+
+  /* Header (matches intricateexposures.com) */
+  .site-header{position:absolute;top:0;left:0;right:0;z-index:10;padding:28px 4vw}
+  .nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2vw}
+  .nav ul{list-style:none;display:flex;justify-content:space-around;gap:1.5vw}
+  .nav a{text-decoration:none;color:#fff;font-size:clamp(14px,1.15vw,18px);font-weight:300;text-shadow:0 1px 8px rgba(0,0,0,.25);transition:opacity .2s}
+  .nav a:hover{opacity:.7}
+  .nav .logo img{height:clamp(90px,10vw,150px);width:auto;max-width:none}
+  .menu-btn{display:none;background:none;border:0;color:#fff;font:inherit;font-size:15px;cursor:pointer}
+  .mobile-menu{display:none}
+
+  /* Hero */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;color:#fff;padding:0 6vw 12vh;
+    background:var(--sea) image-set(url("/media/hero-poster.webp") type("image/webp"),url("/media/hero-poster.jpg") type("image/jpeg")) center/cover no-repeat;overflow:hidden}
+  @media (max-width:900px){.hero{background-image:url("/media/hero-poster-960.webp")}}
+  .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(1,36,56,.32)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;background-image:var(--grain);mix-blend-mode:soft-light;opacity:.6;pointer-events:none}
+  .hero-inner{position:relative;z-index:2;max-width:820px}
+  .hero h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(40px,6vw,84px);line-height:1.08;margin-bottom:.4em}
+  .hero p{font-size:clamp(16px,1.4vw,20px);max-width:600px;margin:0 auto 2em}
+
+  .btn{display:inline-block;text-decoration:none;font-size:16px;font-weight:400;padding:15px 32px;transition:background .2s,color .2s}
+  .btn-solid{background:var(--sun);color:var(--sea)}
+  .btn-solid:hover{background:#d95d0e}
+  .btn-ghost{color:#fff;box-shadow:inset 0 0 0 1px #fff}
+  .btn-ghost:hover{background:#fff;color:var(--sea)}
+  .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* Sections */
+  section{padding:110px 6vw}
+  .wrap{max-width:1080px;margin:0 auto}
+  .narrow{max-width:720px;margin:0 auto}
+  h2{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(32px,3.8vw,50px);line-height:1.15;margin-bottom:.6em}
+  h3{font-family:"Playfair Display",serif;font-weight:500;font-size:24px;line-height:1.3;margin-bottom:.4em}
+  .lead{font-size:clamp(17px,1.4vw,20px)}
+  p+p{margin-top:1em}
+  .center{text-align:center}
+  .dark{color:var(--foam);background-color:var(--sea);background-image:var(--grain);background-blend-mode:soft-light}
+  .dark p a{color:var(--sun)}
+
+  .films{max-width:1320px;margin:50px auto 0;display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:32px}
+  .film{margin:0}
+  .film-frame{position:relative;aspect-ratio:16/9;background:#000}
+  .film-frame video{position:absolute;inset:0;width:100%;height:100%;display:block;background:#000;object-fit:contain}
+  .film-caption{text-align:center;margin-top:16px;font-family:"Playfair Display",serif;font-size:20px}
+  .film-note{display:block;font-family:Poppins,sans-serif;font-size:14px;opacity:.75}
+
+  .pillars{max-width:900px;margin:70px auto 0}
+  .pillar{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:baseline}
+  .pillar+.pillar{margin-top:44px}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:center}
+  .about-photo{display:block;aspect-ratio:4/5;overflow:hidden}
+  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:62% center}
+
+  .same-night .narrow{max-width:760px}
+  .same-night .note{font-size:15px;opacity:.75;margin-top:1.4em}
+
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:48px 70px;margin-top:60px;max-width:900px;margin-left:auto;margin-right:auto}
+
+  details{padding:18px 0}
+  summary{cursor:pointer;list-style:none;font-family:"Playfair Display",serif;font-size:21px;display:flex;justify-content:space-between;gap:20px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:Poppins,sans-serif;font-weight:300;font-size:26px;line-height:1}
+  details[open] summary::after{content:"\2013"}
+  details p{margin-top:10px;max-width:640px}
+
+  .cta{text-align:center}
+  .cta .btn-row{margin-top:34px}
+
+  footer{text-align:center;padding:60px 6vw;font-size:14px}
+  footer .flogo img{height:90px;width:auto;margin:0 auto 18px}
+  footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin:20px 0}
+  footer nav a{text-decoration:none}
+  footer nav a:hover{text-decoration:underline;text-decoration-color:var(--sun);text-underline-offset:4px}
+
+  @media (max-width:900px){
+    .nav ul{display:none}
+    .menu-btn{display:block;justify-self:end}
+    .nav .logo{grid-column:2}
+    .nav .logo img{height:72px}
+    .mobile-menu.open{display:block;position:fixed;inset:0;background:var(--foam);color:var(--sea);z-index:20;padding:40px 8vw}
+    .mobile-menu ul{list-style:none;margin-top:60px}
+    .mobile-menu li a{display:block;text-decoration:none;font-family:"Playfair Display",serif;font-size:30px;padding:8px 0}
+    .mobile-menu .close{background:none;border:0;font:inherit;font-size:15px;float:right;cursor:pointer}
+    section{padding:80px 7vw}
+    .about-grid,.steps{grid-template-columns:1fr}
+    .pillar{grid-template-columns:1fr;gap:4px}
+    .films{grid-auto-flow:row;grid-template-columns:1fr;gap:40px}
+    .about-grid{gap:40px}
+    .steps{gap:36px}
+    .btn-row .btn{width:100%;max-width:340px;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav" aria-label="Main">
+    <ul>
+      <li><a href="https://www.intricateexposures.com/">Home</a></li>
+      <li><a href="https://www.intricateexposures.com/about/">About</a></li>
+      <li><a href="https://www.intricateexposures.com/experience/">Experience</a></li>
+      <li><a href="https://www.intricateexposures.com/pricing/">Pricing</a></li>
+    </ul>
+    <a class="logo" href="/" aria-label="Intricate Cinema home">
+      <picture>
+        <source type="image/webp" srcset="/img/intricate-cinema-logo-360.webp 360w, /img/intricate-cinema-logo-720.webp 720w" sizes="(max-width:900px) 190px, 354px">
+        <img src="/img/intricate-cinema-logo-720.png" width="720" height="305" alt="Intricate Cinema" fetchpriority="high">
+      </picture>
+    </a>
+    <ul>
+      <li><a href="https://www.intricateexposures.com/weddings/">Wedding</a></li>
+      <li><a href="https://www.intricateexposures.com/portraits/">Portraiture</a></li>
+      <li><a href="https://www.intricateexposures.com/blog/">Blog</a></li>
+      <li><a href="https://www.intricateexposures.com/contact/">Contact</a></li>
+    </ul>
+    <button class="menu-btn" aria-controls="mm" aria-label="Open menu" onclick="document.getElementById('mm').classList.add('open')">Menu</button>
+  </nav>
+  <div class="mobile-menu" id="mm">
+    <button class="close" onclick="document.getElementById('mm').classList.remove('open')">Close</button>
+    <ul>
+      <li><a href="https://www.intricateexposures.com/">Home</a></li>
+      <li><a href="https://www.intricateexposures.com/about/">About</a></li>
+      <li><a href="https://www.intricateexposures.com/experience/">Experience</a></li>
+      <li><a href="https://www.intricateexposures.com/pricing/">Pricing</a></li>
+      <li><a href="https://www.intricateexposures.com/weddings/">Wedding</a></li>
+      <li><a href="https://www.intricateexposures.com/portraits/">Portraiture</a></li>
+      <li><a href="https://www.intricateexposures.com/blog/">Blog</a></li>
+      <li><a href="https://www.intricateexposures.com/contact/">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/media/hero-poster.webp" aria-hidden="true">
+      <source src="/media/hero-hq.mp4" type="video/mp4">
+    </video>
+    <div class="hero-inner">
+      <h1>Your wedding, filmed like a movie</h1>
+      <p>Wedding films from a Grand Rapids cinematographer who spends the rest of the week shooting commercials and documentaries.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="https://www.intricateexposures.com/contact/">Check my date</a>
+        <a class="btn btn-ghost" href="#films">Watch the films</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="films">
+    <div class="narrow center">
+      <h2>The day goes by fast, so we film all of it</h2>
+      <p class="lead">Most of your wedding will be a blur: the vows, your dad's toast, your best friend losing it on the dance floor. We catch those moments as they happen and cut them into a film you'll want to watch every anniversary.</p>
+    </div>
+    <div class="films">
+      <figure class="film">
+        <div class="film-frame">
+          <video controls playsinline preload="none" width="1920" height="804" poster="/media/kendra-gregory-poster.webp" title="Kendra &amp; Gregory wedding film" aria-label="Kendra and Gregory wedding film">
+            <source src="/media/kendra-gregory.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="film-caption">Kendra &amp; Gregory</figcaption>
+      </figure>
+      <figure class="film">
+        <div class="film-frame">
+          <video controls playsinline preload="none" width="1920" height="1080" poster="/media/jackson-lydia-poster.webp" title="Jackson &amp; Lydia same-night wedding film" aria-label="Jackson and Lydia same-night wedding film">
+            <source src="/media/jackson-lydia.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption class="film-caption">Jackson &amp; Lydia<span class="film-note">Same-night edit</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="narrow center">
+        <h2>Guided when it helps, hands off the rest of the day</h2>
+        <p class="lead">We'll set up a few moments where it makes sense, then step back and let the day unfold. You spend your wedding with your people instead of posing for a camera.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Emotion first</h3>
+          <p>The tears, the inside jokes, the chaos on the dance floor. Those moments are what make a wedding film, and we make sure they end up in yours.</p>
+        </div>
+        <div class="pillar">
+          <h3>Cinematic by trade</h3>
+          <p>Commercial-grade cameras, lenses, audio and drone, run by someone who lights and frames for a living. Natural color that won't look dated in ten years.</p>
+        </div>
+        <div class="pillar">
+          <h3>Built around your story</h3>
+          <p>Before the wedding we talk about who you are, the music you love and who matters most. Your vows, toasts and letters become the backbone of the film, so it sounds like you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark" id="about">
+    <div class="wrap about-grid">
+      <picture class="about-photo">
+        <source type="image/webp" srcset="/img/harley-dean-cinematographer.webp">
+        <img src="/img/harley-dean-cinematographer.jpg" width="960" height="959" loading="lazy" decoding="async" alt="Harley Dean, Grand Rapids wedding videographer, holding a RED cinema camera">
+      </picture>
+      <div>
+        <h2>Hi, I'm Harley</h2>
+        <p>I started out as a photographer, and I still see everything in frames: light coming through a window, a hand on a shoulder, the half second before someone laughs. Moving into film let me catch what happens between those frames too.</p>
+        <p>These days I shoot commercials, brand films and documentaries for production companies across Michigan. Weddings are where all of that comes together. They're unscripted, emotional, and they happen once. You don't get a second take on a first look.</p>
+        <p>I'm married to Kelsie (<a href="https://www.intricateexposures.com/">Intricate Exposures</a>), and we have two little ones who make life a lot of fun. I know how much goes into a wedding day and how fast it goes by. My job is to slow it down for you, so years from now you can press play and be right back in it.</p>
+        <p>Whoever is behind the camera on your day, your film is shot and finished to the same standard, and you work with us directly from the first call to final delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="narrow center">
+        <h2>How booking works</h2>
+        <p class="lead">Booking a videographer shouldn't be one more thing to stress about. Here's what happens from first message to final film.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Say hello</h3><p>Send your date and venue. We'll reply within 24 hours with our availability and pricing guide.</p></li>
+        <li><h3>Hop on a call</h3><p>A relaxed 20-minute video chat so we can get to know each other and make sure we're a good fit.</p></li>
+        <li><h3>Lock in your date</h3><p>Sign the contract online and pay a retainer, and your date is reserved for you.</p></li>
+        <li><h3>Plan the story</h3><p>About a month out, we go over your timeline, the people who matter most, any letters or readings, and the music you love.</p></li>
+        <li><h3>Enjoy your day</h3><p>We show up early, blend in and film it all, so you can stay present.</p></li>
+        <li><h3>Watch it back</h3><p>Your teaser arrives within a week, followed by your full film in a private online gallery you can share with family.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="dark" id="same-night">
+    <div class="narrow center">
+      <h2>Watch your wedding film before the night ends</h2>
+      <p class="lead">Our same-night add-on: while you're on the dance floor, we're editing. Before the last dance, your guests gather around a big screen for a 2–4 minute film of everything that happened that day.</p>
+      <p class="note">Requires two cinematographers and an on-site editor.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="narrow">
+      <h2 class="center">Questions couples ask us</h2>
+      <details><summary>Do we really need a videographer if we have a photographer?</summary><p>Photos show what your day looked like. Film shows what it sounded and felt like: your voices, the laughter during the toasts, the song you walked down the aisle to.</p></details>
+      <details><summary>Will you get in the way?</summary><p>No. We use small gear and keep our distance during the ceremony, so it's easy to forget we're there.</p></details>
+      <details><summary>Do you work with our photographer?</summary><p>Always. We reach out to your photographer before the wedding so we can plan angles and stay out of each other's shots. Book photo and film together through Intricate Exposures and it's one team from start to finish.</p></details>
+      <details><summary>Can we choose the music?</summary><p>Yes. Tell us the songs and artists you love and we'll pick fully licensed tracks that match, so your film can be shared anywhere without getting muted.</p></details>
+      <details><summary>Do you travel?</summary><p>We're based in Grand Rapids and film all over Michigan, and we're happy to travel for destination weddings.</p></details>
+      <details><summary>What if it rains?</summary><p>Rain makes for some of the best footage. We bring weather-sealed gear and plan backup shots with you ahead of time.</p></details>
+      <details><summary>How far in advance should we book?</summary><p>We recommend 9–18 months out. Popular Saturdays from June through October fill first.</p></details>
+    </div>
+  </section>
+
+  <section class="cta dark">
+    <div class="narrow">
+      <h2>Your date is the one thing we can't make more of</h2>
+      <p class="lead">Tell us about your day and we'll send our pricing guide within 24 hours.</p>
+      <div class="btn-row">
+        <a class="btn btn-solid" href="https://www.intricateexposures.com/contact/">Let's talk</a>
+        <a class="btn btn-ghost" href="https://www.intricateexposures.com/weddings/">See the photography</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="flogo" href="https://www.intricateexposures.com/"><img src="https://images-pw.pixieset.com/profile/4272/80471ba1a0f22458b27e1c03acc4e32209e03dd1559cee6427f253c3857d8f70.png" width="500" height="228" loading="lazy" decoding="async" alt="Intricate Exposures wedding photography logo"></a>
+  <p>Intricate Cinema, wedding films by Harley Dean in Grand Rapids, Michigan.<br>Filming across Michigan and beyond.</p>
+  <nav aria-label="On this page">
+    <a href="#films">Wedding films</a>
+    <a href="#approach">Approach</a>
+    <a href="#about">About Harley</a>
+    <a href="#same-night">Same-night film</a>
+    <a href="#experience">How it works</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <nav aria-label="Footer">
+    <a href="https://www.intricateexposures.com/">Home</a>
+    <a href="https://www.intricateexposures.com/about/">About</a>
+    <a href="https://www.intricateexposures.com/experience/">Experience</a>
+    <a href="https://www.intricateexposures.com/pricing/">Pricing</a>
+    <a href="https://www.intricateexposures.com/weddings/">Wedding</a>
+    <a href="https://www.intricateexposures.com/portraits/">Portraiture</a>
+    <a href="https://www.intricateexposures.com/blog/">Blog</a>
+    <a href="https://www.intricateexposures.com/contact/">Contact</a>
+  </nav>
+  <p style="font-size:12px;opacity:.75">© 2026 HDCinema LLC, doing business as Intricate Cinema</p>
+</footer>
+
+</body>
+</html>
